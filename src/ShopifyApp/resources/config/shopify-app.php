@@ -194,7 +194,10 @@ return [
     |
     */
 
-    'api_redirect' => env('SHOPIFY_API_REDIRECT', '/authenticate'),
+    'api_redirect' => env('SHOPIFY_API_REDIRECT', empty(env('SHOPIFY_APP_PREFIX', '')) 
+        ? '/authenticate' 
+        : env('SHOPIFY_APP_PREFIX', '').'/authenticate'
+    ),
 
     /*
     |--------------------------------------------------------------------------
@@ -291,7 +294,10 @@ return [
     |
     */
 
-    'billing_redirect' => env('SHOPIFY_BILLING_REDIRECT', '/billing/process'),
+    'billing_redirect' => env('SHOPIFY_BILLING_REDIRECT', empty(env('SHOPIFY_APP_PREFIX', '')) 
+        ? '/billing/process' 
+        : env('SHOPIFY_APP_PREFIX', '').'/billing/process'
+    ),
 
     /*
     |--------------------------------------------------------------------------

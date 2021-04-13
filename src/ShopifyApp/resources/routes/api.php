@@ -12,7 +12,7 @@ if ($manualRoutes) {
     $manualRoutes = explode(',', $manualRoutes);
 }
 
-Route::group(['middleware' => ['api']], function () use ($manualRoutes) {
+Route::group(['prefix' => getShopifyConfig('prefix'), 'middleware' => ['api']], function () use ($manualRoutes) {
     /*
     |--------------------------------------------------------------------------
     | API Routes
