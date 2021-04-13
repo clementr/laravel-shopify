@@ -1,5 +1,5 @@
 {
-    "name": "osiset/laravel-shopify",
+    "name": "clementr/laravel-shopify",
     "description": "Shopify package for Laravel to aide in app development",
     "keywords": [
         "api",
@@ -55,6 +55,9 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "replace": {
+        "osiset/laravel-shopify":"16.*"
+    }, 
     "scripts": {
         "test": "vendor/bin/phpunit",
         "test-html-cov": "vendor/bin/phpunit --coverage-html ./build/html/",
